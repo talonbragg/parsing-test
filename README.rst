@@ -10,9 +10,9 @@ METAR (METeorological Aerodrome Reports) telegrams are automated weather observa
 
 The telegrams need to be parsed into a dict suitable for encoding as an Avro_ object. The schema of the Avro object is in ``src/schema.py`` as the ``metar`` dict. You can see the fields, and their formats, listed under the ``fields`` key. This should indicate to you what the keys in your output dict ought to be and what format their values ought to be in. It also shows which keys need to be extracted from the METAR telegram (we are not interested in anything not in the schema). At this point, it may be worthwhile to check out the Avro documentation on schemata_. In particular, keep in mind the ``map`` encoding of layers aloft (you might find this referred to as 'cloud cover' in other contexts). Layers aloft should be encoded as ``altitude: type``. For instance, the layers aloft part of the following METAR message
 
-.. code-block::
+``
     KORD 051551Z 05015KT 6SM -RA BR FEW007 BKN023 OVC029 06/04 A2978 RMK AO2 PRESFR SLP088 P0008 T00610044 $
-
+``
 
 should be parsed as
 
