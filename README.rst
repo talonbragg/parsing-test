@@ -1,7 +1,7 @@
 METAR decoder
 -------------
 
-This test task asks you to create a METAR decoder that ingests a .metar file, comprising METAR observations (one observation per line), parse them and serialise them to an Avro schema. Your code should be callable from `src/cli.py` without alterations.
+This test task asks you to create a METAR decoder that ingests a ``.metar`` file, comprising METAR observations (one observation per line), parse them and serialise them to an Avro schema. Your code should be callable from ``src/cli.py`` without alterations.
 
 Task
 ====
